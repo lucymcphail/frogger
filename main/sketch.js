@@ -1,32 +1,35 @@
 var scl = 100;
 
 function setup() {
-    createCanvas(700, 700);
+    createCanvas(1400, 1400);
     frogger = new frog();
-    logs = [];
-    cars = [];
-
-    logs[0] = new obstacleLog(1, 1);
-    cars[0] = new obstacleCar(4, -1);
-    logs[1] = new obstacleLog(2, -1);
-    cars[1] = new obstacleCar(5, 1);
+    logs = [
+        new obstacleLog(2, 1),
+        new obstacleLog(3, -1),
+        new obstacleLog(4, 1),
+        new obstacleLog(5, -1)
+    ];
+    cars = [
+        new obstacleCar(8, -1),
+        new obstacleCar(9, 1),
+        new obstacleCar(10, -1),
+        new obstacleCar(11, 1)
+    ];
 }
 
 function draw() {
     drawBackground();
-    logs[0].update();
-    logs[0].show();
+    
+    for (var i = 0; i < logs.length; i++) {
+        logs[i].update();
+        logs[i].show();
+    }
 
-    logs[1].update();
-    logs[1].show();
-
-    cars[0].update();
-    cars[0].show();
-    cars[0].hitFrog();
-
-    cars[1].update();
-    cars[1].show();
-    cars[1].hitFrog();
+    for (var i = 0; i < cars.length; i++) {
+        cars[i].update();
+        cars[i].show();
+        cars[i].hitFrog();
+    }
 
     frogger.inRiver();
     frogger.update();
@@ -37,9 +40,9 @@ function draw() {
 function drawBackground() {
     background(74, 249, 39);
     fill(22, 156, 252);
-    rect(0, 100, 700, 200);
+    rect(0, 200, 1400, 400);
     fill(51, 51, 51);
-    rect(0, 400, 700, 200);
+    rect(0, 800, 1400, 400);
 }
 
 function keyPressed() {
