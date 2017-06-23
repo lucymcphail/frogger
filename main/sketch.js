@@ -3,19 +3,32 @@ var scl = 100;
 function setup() {
     createCanvas(700, 700);
     frogger = new frog();
-    testlog = new obstacleLog(2, 1);
-    testcar = new obstacleCar(4, -1);
+    logs = [];
+    cars = [];
+
+    logs[0] = new obstacleLog(1, 1);
+    cars[0] = new obstacleCar(4, -1);
+    logs[1] = new obstacleLog(2, -1);
+    cars[1] = new obstacleCar(5, 1);
 }
 
 function draw() {
     drawBackground();
-    testlog.update();
-    testlog.show();
+    logs[0].update();
+    logs[0].show();
 
-    testcar.update();
-    testcar.show();
-    testcar.hitFrog();
+    logs[1].update();
+    logs[1].show();
 
+    cars[0].update();
+    cars[0].show();
+    cars[0].hitFrog();
+
+    cars[1].update();
+    cars[1].show();
+    cars[1].hitFrog();
+
+    frogger.inRiver();
     frogger.update();
     frogger.show();
     

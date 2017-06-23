@@ -28,6 +28,18 @@ function obstacleLog(row, direction) {
             this.spawn();
         }
     }
+
+    this.frogOn = function () {
+        if (this.x + this.width >= frogger.x && this.x <= frogger.x) {
+            if (this.y + this.height >= frogger.y && this.y <= frogger.y) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 }
 
 function obstacleCar(row, direction) {
