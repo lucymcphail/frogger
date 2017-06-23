@@ -14,11 +14,11 @@ function draw() {
 
     testcar.update();
     testcar.show();
+    testcar.hitFrog();
 
     frogger.update();
     frogger.show();
     
-    testcar.hitFrog();
 }
 
 function drawBackground() {
