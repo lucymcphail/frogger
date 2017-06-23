@@ -7,4 +7,5 @@ Create concept art - I recommend Krita for this
 ## Game
  - Add car collisions (DONE)
  - Add drowning and logs (DONE)
+ - Add several obstacles per row (TODO)
  - Add artwork (TODO)
