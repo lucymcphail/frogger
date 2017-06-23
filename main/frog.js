@@ -25,8 +25,8 @@ function frog() {
     }
 
     this.die = function () {
-        this.x = 350;
-        this.y = 650;
+        this.x = 700;
+        this.y = 1350;
     }
 
     this.isOnLog = function () {
