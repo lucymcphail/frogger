@@ -17,6 +17,8 @@ function draw() {
 
     frogger.update();
     frogger.show();
+    
+    testcar.hitFrog();
 }
 
 function drawBackground() {
