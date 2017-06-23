@@ -1,6 +1,6 @@
 function frog() {
-    this.x = 350;
-    this.y = 650;
+    this.x = 700;
+    this.y = 1350;
     this.xspeed = 0;
     this.yspeed = 0;
     this.radius = 40;
@@ -42,7 +42,7 @@ function frog() {
     }
 
     this.inRiver = function () {
-        if (this.y >= 100 && this.y <= 300) {
+        if (this.y >= 200 && this.y <= 600) {
 
             if (this.isOnLog()) {
                 return false;
