@@ -1,5 +1,4 @@
 function obstacleLog(row, direction) {
-    this.speed = direction;
     this.width = 200;
     this.height = 60;
     this.x = 0 - this.width;
@@ -24,7 +23,6 @@ function obstacleLog(row, direction) {
 }
 
 function obstacleCar(row, direction) {
-    this.speed = direction;
     this.width = 100;
     this.height = 60;
     this.x = 0 - this.width;
