@@ -44,4 +44,12 @@ function obstacleCar(row, direction) {
     this.update = function() {
         this.x += this.speed;
     }
+
+    this.hitFrog = function() {
+        if (this.x + this.width >= frogger.x - frogger.radius && this.x <= frogger.x + frogger.radius) {
+            if (this.y + this.height >= frogger.y - frogger.radius && this.y <= frogger.y + frogger.radius) {
+                frogger.die();
+            }
+        }
+    }
 }
