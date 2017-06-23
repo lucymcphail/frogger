@@ -24,8 +24,31 @@ function frog() {
         this.yspeed = 0;
     }
 
-    this.die = function() {
+    this.die = function () {
         this.x = 350;
         this.y = 650;
+    }
+
+    this.isOnLog = function () {
+        var onLogs = [];
+        for (var i = 0; i < logs.length; i++) {
+            onLogs.push(logs[i].frogOn());
+        }
+        for (var i = 0; i < onLogs.length; i++) {
+            if (onLogs[i] === true) {
+                return true;
+            }
+        }
+    }
+
+    this.inRiver = function () {
+        if (this.y >= 100 && this.y <= 300) {
+
+            if (this.isOnLog()) {
+                return false;
+            } else {
+                frogger.die();
+            }
+        }
     }
 }
