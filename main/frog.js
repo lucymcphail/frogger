@@ -1,6 +1,6 @@
 function frog() {
     this.x = 350;
-    this.y = 350;
+    this.y = 650;
     this.xspeed = 0;
     this.yspeed = 0;
     this.radius = 40;
