@@ -2,7 +2,7 @@ To-do list for frogger clone
 ============================
 
 ## Art
-Create concept art - I reccomend Krita for this
+Create concept art - I recommend Krita for this
 
 ## Game
 Choose engine/framework to use from:
