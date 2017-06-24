@@ -3,7 +3,7 @@ function frog() {
     this.y = 675;
     this.xspeed = 0;
     this.yspeed = 0;
-    this.radius = 30;
+    this.radius = 25;
 
     this.show = function () {
         fill(0, 60, 0);
