@@ -11,10 +11,10 @@ function obstacleLog(row, direction, xpos) {
 
     this.spawn();
 
-    this.width = 200;
-    this.height = 60;
+    this.width = 100;
+    this.height = 30;
     this.x = xpos;
-    this.y = row * scl + 20;
+    this.y = row * scl + 10;
 
     this.show = function () {
         fill(79, 37, 0);
@@ -55,10 +55,10 @@ function obstacleCar(row, direction, xpos) {
 
     this.spawn();
 
-    this.width = 100;
-    this.height = 60;
+    this.width = 60;
+    this.height = 30;
     this.x = xpos;
-    this.y = row * scl + 20;
+    this.y = row * scl + 10;
 
 
     this.show = function () {
