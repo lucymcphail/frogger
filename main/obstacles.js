@@ -60,9 +60,12 @@ function obstacleCar(row, direction, xpos) {
     this.x = xpos;
     this.y = row * scl + 10;
 
+    var red = floor(random(0, 255));
+    var green = floor(random(0, 255));
+    var blue = floor(random(0, 255));
 
     this.show = function () {
-        fill(200, 20, 20);
+        fill(red, blue, green);
         rect(this.x, this.y, this.width, this.height);
     }
 
