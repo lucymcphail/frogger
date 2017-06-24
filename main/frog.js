@@ -1,9 +1,9 @@
 function frog() {
-    this.x = 700;
-    this.y = 1350;
+    this.x = 375;
+    this.y = 675;
     this.xspeed = 0;
     this.yspeed = 0;
-    this.radius = 40;
+    this.radius = 30;
 
     this.show = function () {
         fill(0, 60, 0);
@@ -18,15 +18,15 @@ function frog() {
     this.update = function () {
         this.x += this.xspeed * scl;
         this.y += this.yspeed * scl;
-        this.x = constrain(this.x, 50, height - 50);
-        this.y = constrain(this.y, 50, height - 50);
+        this.x = constrain(this.x, 25, height - 25);
+        this.y = constrain(this.y, 25, height - 25);
         this.xspeed = 0;
         this.yspeed = 0;
     }
 
     this.die = function () {
-        this.x = 700;
-        this.y = 1350;
+        this.x = 375;
+        this.y = 675;
     }
 
     this.isOnLog = function () {
@@ -42,7 +42,7 @@ function frog() {
     }
 
     this.inRiver = function () {
-        if (this.y >= 200 && this.y <= 600) {
+        if (this.y >= 100 && this.y <= 300) {
 
             if (this.isOnLog()) {
                 return false;
