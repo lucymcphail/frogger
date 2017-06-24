@@ -1,4 +1,4 @@
-function obstacleLog(row, direction) {
+function obstacleLog(row, direction, xpos) {
     this.spawn = function () {
         if (direction === 1) {
             this.speed = 1;
@@ -13,7 +13,7 @@ function obstacleLog(row, direction) {
 
     this.width = 200;
     this.height = 60;
-    this.x = floor(random(0, width - this.width));
+    this.x = xpos;
     this.y = row * scl + 20;
 
     this.show = function () {
@@ -42,7 +42,7 @@ function obstacleLog(row, direction) {
     }
 }
 
-function obstacleCar(row, direction) {
+function obstacleCar(row, direction, xpos) {
     this.spawn = function () {
         if (direction === 1) {
             this.speed = 1;
@@ -57,7 +57,7 @@ function obstacleCar(row, direction) {
 
     this.width = 100;
     this.height = 60;
-    this.x = floor(random(0, width - this.width));
+    this.x = xpos;
     this.y = row * scl + 20;
 
 

@@ -3,18 +3,24 @@ var scl = 100;
 function setup() {
     createCanvas(1400, 1400);
     frogger = new frog();
-    logs = [
-        new obstacleLog(2, 1),
-        new obstacleLog(3, -1),
-        new obstacleLog(4, 1),
-        new obstacleLog(5, -1)
-    ];
-    cars = [
-        new obstacleCar(8, -1),
-        new obstacleCar(9, 1),
-        new obstacleCar(10, -1),
-        new obstacleCar(11, 1)
-    ];
+    logs = [];
+    cars = [];
+
+    for (var i = 2; i < 6; i++) {
+        var j = floor(random(0, width));
+        logs.push(new obstacleLog(i, i % 2, (j + 0) % 1600));
+        logs.push(new obstacleLog(i, i % 2, (j + 400) % 1600));
+        logs.push(new obstacleLog(i, i % 2, (j + 800) % 1600));
+        logs.push(new obstacleLog(i, i % 2, (j + 1200) % 1600));
+    }
+     
+    for (var i = 8; i < 12; i++) {
+        var j = floor(random(0, width));
+        cars.push(new obstacleCar(i, i % 2, (j + 0) % 1500));
+        cars.push(new obstacleCar(i, i % 2, (j + 400) % 1500));
+        cars.push(new obstacleCar(i, i % 2, (j + 800) % 1500));
+        cars.push(new obstacleCar(i, i % 2, (j + 1200) % 1500));
+    }
 }
 
 function draw() {
