@@ -1,4 +1,5 @@
 var scl = 50;
+var score = 0;
 
 function setup() {
     createCanvas(700, 700);
@@ -26,6 +27,10 @@ function setup() {
 function draw() {
     drawBackground();
     
+    for (var i - 0; i < score; i++) {
+        rect(20 + (i * scl), 20, 20, 20);
+    }
+    
     for (var i = 0; i < logs.length; i++) {
         logs[i].update();
         logs[i].show();
@@ -40,7 +45,7 @@ function draw() {
     frogger.inRiver();
     frogger.update();
     frogger.show();
-    
+    frogger.win();
 }
 
 function drawBackground() {
