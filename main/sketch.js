@@ -27,7 +27,7 @@ function setup() {
 function draw() {
     drawBackground();
     
-    for (var i - 0; i < score; i++) {
+    for (var i = 0; i < score; i++) {
         rect(20 + (i * scl), 20, 20, 20);
     }
     
