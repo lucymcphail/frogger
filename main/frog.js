@@ -54,7 +54,7 @@ function frog() {
     
     this.win = function() {
         if (this.y < 100) {
-            this.spawn;
+            this.spawn();
             score++;
         }
     }
