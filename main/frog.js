@@ -57,6 +57,8 @@ function frog() {
         if (this.y < 100) {
             this.spawn();
             score++;
+            this.x = 375;
+            this.y = 675;
         }
     }
 }
