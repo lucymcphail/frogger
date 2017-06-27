@@ -4,7 +4,7 @@ var score = 0;
 function preload() {
     carImg = loadImage(tex/car.png);
     logImg = loadImage(tex/log.png);
-    frogImg = loadImage(tex/frog.png);
+    frogImg = loadImage(tex/frogger.png);
 }
 
 function setup() {
