@@ -1,6 +1,12 @@
 var scl = 50;
 var score = 0;
 
+function preload() {
+    carImg = loadImage(tex/car.png);
+    logImg = loadImage(tex/log.png);
+    frogImg = loadImage(tex/frog.png);
+}
+
 function setup() {
     createCanvas(700, 700);
     frogger = new frog();
