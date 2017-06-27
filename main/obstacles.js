@@ -17,8 +17,7 @@ function obstacleLog(row, direction, xpos) {
     this.y = row * scl + 10;
 
     this.show = function () {
-        fill(79, 37, 0);
-        rect(this.x, this.y, this.width, this.height);
+        image(logImg, this.x, this.y, this.width, this.height);
     }
 
     this.update = function () {
@@ -65,8 +64,8 @@ function obstacleCar(row, direction, xpos) {
     var blue = floor(random(0, 255));
 
     this.show = function () {
-        fill(red, blue, green);
-        rect(this.x, this.y, this.width, this.height);
+        tint(red, green, blue);
+        image(carImg, this.x, this.y, this.width, this.height);
     }
 
     this.update = function () {
