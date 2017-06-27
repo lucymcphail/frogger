@@ -17,6 +17,7 @@ function obstacleLog(row, direction, xpos) {
     this.y = row * scl + 10;
 
     this.show = function () {
+        tint(255);
         image(logImg, this.x, this.y, this.width, this.height);
     }
 
