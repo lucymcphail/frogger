@@ -2,10 +2,10 @@ To-do list for frogger clone
 ============================
 
 ## Art
-Create concept art - I recommend Krita for this
+- [ ] Fix USB stick image
 
 ## Game
- - Add car collisions (DONE)
- - Add drowning and logs (DONE)
- - Add several obstacles per row (TODO)
- - Add artwork (TODO)
+ - [X] Add car collisions
+ - [X] Add drowning and logs
+ - [X] Add several obstacles per row
+ - [ ] Add artwork
