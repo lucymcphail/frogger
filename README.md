@@ -1,5 +1,7 @@
 Frogger Clone
 =============
 
-Just a programming project in p5.js.
-[Click here](https://brucekly.github.io/frogger/main) for the game itself.
+Clone of the classic Atari arcade game written in JavaScript using the p5.js library.
+[Click here](https://brucekly.github.io/frogger/main) to play.
+
+Quick note: If you have problems with lag, it is likely due to the images. Thus, these can be diabled using the `ENTER` key.
