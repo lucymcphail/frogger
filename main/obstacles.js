@@ -16,8 +16,12 @@ function obstacleLog(row, direction, xpos) {
     this.x = xpos;
     this.y = row * scl + 10;
 
+    var red = floor(random(0, 255));
+    var green = floor(random(0, 255));
+    var blue = floor(random(0, 255));
+
     this.show = function () {
-        tint(255);
+        tint(red, green, blue);
         image(logImg, this.x, this.y, this.width, this.height);
     }
 
