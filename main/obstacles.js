@@ -21,8 +21,13 @@ function obstacleLog(row, direction, xpos) {
     var blue = floor(random(0, 255));
 
     this.show = function () {
-        tint(red, green, blue);
-        image(logImg, this.x, this.y, this.width, this.height);
+        if (textures == 1) {
+            tint(red, green, blue);
+            image(logImg, this.x, this.y, this.width, this.height);
+        } else {
+            fill(red, green, blue);
+            rect(this.x, this.y, this.width, this.height);
+        }
     }
 
     this.update = function () {
@@ -69,8 +74,13 @@ function obstacleCar(row, direction, xpos) {
     var blue = floor(random(0, 255));
 
     this.show = function () {
-        tint(red, green, blue);
-        image(carImg, this.x, this.y, this.width, this.height);
+        if (textures == 1) {
+            tint(red, green, blue);
+            image(carImg, this.x, this.y, this.width, this.height);
+        } else {
+            fill(red, green, blue);
+            rect(this.x, this.y, this.width, this.height);
+        }
     }
 
     this.update = function () {
