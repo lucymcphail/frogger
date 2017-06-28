@@ -35,7 +35,7 @@ function obstacleLog(row, direction, xpos) {
 
     this.frogOn = function () {
         if (this.x + this.width >= frogger.x && this.x <= frogger.x) {
-            if (this.y + this.height >= frogger.y && this.y <= frogger.y) {
+            if (this.y + scl >= frogger.y && this.y - (scl - this.height) <= frogger.y) {
                 return true;
             } else {
                 return false;

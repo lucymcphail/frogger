@@ -6,22 +6,20 @@ function frog() {
     this.radius = 25;
 
     this.show = function () {
-        fill(0, 60, 0);
+        fill(255, 255, 255);
         ellipse(this.x, this.y, this.radius, this.radius);
     }
 
-    this.dir = function (x, y) {
-        this.xspeed = x;
-        this.yspeed = y;
-    }
-
     this.update = function () {
-        this.x += this.xspeed * scl;
-        this.y += this.yspeed * scl;
         this.x = constrain(this.x, 25, height - 25);
         this.y = constrain(this.y, 25, height - 25);
-        this.xspeed = 0;
-        this.yspeed = 0;
+        if (this.isOnLog()) {
+            if (this.y % 100 >= 50) {
+                this.x++;
+            } else {
+                this.x--;
+            }
+        }
     }
 
     this.die = function () {
