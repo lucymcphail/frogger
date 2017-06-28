@@ -2,8 +2,8 @@ var scl = 50;
 var score = 0;
 
 function preload() {
-    carImg = loadImage("tex/car.jpg");
-    logImg = loadImage("tex/log.jpg");
+    carImg = loadImage("tex/car.png");
+    logImg = loadImage("tex/log.png");
     frogImg = loadImage("tex/frogger.jpg");
 }
 
