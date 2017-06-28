@@ -81,7 +81,7 @@ function drawBackground() {
 }
 
 function keyPressed() {
-    if (keycode == ENTER) {
+    if (keyCode == ENTER) {
         if (textures == 1) {
             textures = 0;
         } else {
