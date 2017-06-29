@@ -1,4 +1,4 @@
-function obstacleLog(row, direction, xpos) {
+function obstacleLog(row, direction, xpos, img) {
     this.spawn = function () {
         if (direction === 1) {
             this.speed = 1;
@@ -11,6 +11,7 @@ function obstacleLog(row, direction, xpos) {
 
     this.spawn();
 
+    this.img = img;
     this.width = scl * 2;
     this.height = scl * 0.6;
     this.x = xpos;
@@ -23,7 +24,7 @@ function obstacleLog(row, direction, xpos) {
     this.show = function () {
         if (textures == 1) {
             tint(red, green, blue);
-            image(logImg, this.x, this.y, this.width, this.height);
+            image(this.img, this.x, this.y, this.width, this.height);
         } else {
             fill(red, green, blue);
             rect(this.x, this.y, this.width, this.height);
@@ -51,7 +52,7 @@ function obstacleLog(row, direction, xpos) {
     }
 }
 
-function obstacleCar(row, direction, xpos) {
+function obstacleCar(row, direction, xpos, img) {
     this.spawn = function () {
         if (direction === 1) {
             this.speed = 1;
@@ -64,6 +65,7 @@ function obstacleCar(row, direction, xpos) {
 
     this.spawn();
 
+    this.img = img;
     this.width = scl * 1.2;
     this.height = scl * 0.6;
     this.x = xpos;
@@ -76,7 +78,7 @@ function obstacleCar(row, direction, xpos) {
     this.show = function () {
         if (textures == 1) {
             tint(red, green, blue);
-            image(carImg, this.x, this.y, this.width, this.height);
+            image(this.img, this.x, this.y, this.width, this.height);
         } else {
             fill(red, green, blue);
             rect(this.x, this.y, this.width, this.height);

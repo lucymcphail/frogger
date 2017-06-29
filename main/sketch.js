@@ -25,14 +25,14 @@ function setup() {
     for (var i = 2; i < 6; i++) {
         var start = floor(random(0, width));
         for (var j = 0; j < width / (scl * 4); j++) {
-            logs.push(new obstacleLog(i, i % 2, (start + scl * 4 * j) % (width + scl * 2)));
+            logs.push(new obstacleLog(i, i % 2, (start + scl * 4 * j) % (width + scl * 2), logImg));
         }
     }
 
     for (var i = 8; i < 12; i++) {
         var start = floor(random(0, width));
         for (var j = 0; j < width / (scl * 4); j++) {
-            cars.push(new obstacleCar(i, i % 2, (start + scl * 4 * j) % (width + scl * 1.2)));
+            cars.push(new obstacleCar(i, i % 2, (start + scl * 4 * j) % (width + scl * 1.2), carImg));
         }
     }
 }
