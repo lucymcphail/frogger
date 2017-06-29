@@ -76,10 +76,10 @@ function draw() {
 }
 
 function drawBackground() {
-    background(74, 249, 39);
-    fill(255, 20, 20);
+    background(14, 173, 105);
+    fill(84, 6, 222);
     rect(0, scl * 2, windowWidth, scl * 4);
-    fill(51, 51, 51);
+    fill(30, 30, 30);
     rect(0, scl * 8, windowWidth, scl * 4);
 }
 

@@ -16,9 +16,9 @@ function obstacleLog(row, direction, xpos) {
     this.x = xpos;
     this.y = row * scl + (scl / 5);
 
-    var red = floor(random(0, 255));
-    var green = floor(random(0, 255));
-    var blue = floor(random(0, 255));
+    var red = floor(random(120, 255));
+    var green = floor(random(80, 255));
+    var blue = floor(random(20, 160));
 
     this.show = function () {
         if (textures == 1) {
@@ -69,9 +69,9 @@ function obstacleCar(row, direction, xpos) {
     this.x = xpos;
     this.y = row * scl + (scl / 5);
 
-    var red = floor(random(0, 255));
-    var green = floor(random(0, 255));
-    var blue = floor(random(0, 255));
+    var red = floor(random(60, 255));
+    var green = 0;
+    var blue = floor(random(60, 255));
 
     this.show = function () {
         if (textures == 1) {
