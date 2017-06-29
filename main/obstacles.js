@@ -11,10 +11,10 @@ function obstacleLog(row, direction, xpos) {
 
     this.spawn();
 
-    this.width = 100;
-    this.height = 30;
+    this.width = scl * 2;
+    this.height = scl * 0.6;
     this.x = xpos;
-    this.y = row * scl + 10;
+    this.y = row * scl + (scl / 5);
 
     var red = floor(random(0, 255));
     var green = floor(random(0, 255));
@@ -64,10 +64,10 @@ function obstacleCar(row, direction, xpos) {
 
     this.spawn();
 
-    this.width = 60;
-    this.height = 30;
+    this.width = scl * 1.2;
+    this.height = scl * 0.6;
     this.x = xpos;
-    this.y = row * scl + 10;
+    this.y = row * scl + (scl / 5);
 
     var red = floor(random(0, 255));
     var green = floor(random(0, 255));

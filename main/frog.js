@@ -1,9 +1,9 @@
 function frog() {
-    this.x = 375;
-    this.y = 675;
+    this.x = width / 2 - (scl / 2);
+    this.y = height - (scl / 2);
     this.xspeed = 0;
     this.yspeed = 0;
-    this.radius = 25;
+    this.radius = scl / 2;
 
     this.show = function () {
         fill(255, 255, 255);
@@ -11,10 +11,10 @@ function frog() {
     }
 
     this.update = function () {
-        this.x = constrain(this.x, 25, height - 25);
-        this.y = constrain(this.y, 25, height - 25);
+        this.x = constrain(this.x, scl / 2, width - scl / 2);
+        this.y = constrain(this.y, scl / 2, width - scl / 2);
         if (this.isOnLog()) {
-            if (this.y % 100 >= 50) {
+            if (this.y % (scl * 2) >= (scl)) {
                 this.x++;
             } else {
                 this.x--;
@@ -23,8 +23,8 @@ function frog() {
     }
 
     this.die = function () {
-        this.x = 375;
-        this.y = 675;
+        this.x = width / 2 - (scl / 2);
+        this.y = height - (scl / 2);
         score = 0;
     }
 
@@ -41,7 +41,7 @@ function frog() {
     }
 
     this.inRiver = function () {
-        if (this.y >= 100 && this.y <= 300) {
+        if (this.y >= scl * 2 && this.y <= scl * 6) {
 
             if (this.isOnLog()) {
                 return false;
@@ -50,12 +50,12 @@ function frog() {
             }
         }
     }
-    
-    this.win = function() {
-        if (this.y < 100) {
+
+    this.win = function () {
+        if (this.y < scl * 2) {
             score++;
-            this.x = 375;
-            this.y = 675;
+            this.x = width / 2 - (scl / 2);
+            this.y = height - (scl / 2);
         }
     }
 }

@@ -1,6 +1,6 @@
 var scl = 50;
 var score = 0;
-var speed = 2;
+var speed = scl / 25;
 var textures = 1;
 
 function preload() {
@@ -10,25 +10,24 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(700, 700);
+    scl = windowHeight / 14;
+    createCanvas(windowWidth, windowHeight);
     frogger = new frog();
     logs = [];
     cars = [];
 
     for (var i = 2; i < 6; i++) {
-        var j = floor(random(0, width));
-        logs.push(new obstacleLog(i, i % 2, (j + 0) % 800));
-        logs.push(new obstacleLog(i, i % 2, (j + 200) % 800));
-        logs.push(new obstacleLog(i, i % 2, (j + 400) % 800));
-        logs.push(new obstacleLog(i, i % 2, (j + 600) % 800));
+        var start = floor(random(0, width));
+        for (var j = 0; j < width / (scl * 4); j++) {
+            logs.push(new obstacleLog(i, i % 2, (start + scl * 4 * j) % (width + scl * 2)));
+        }
     }
 
     for (var i = 8; i < 12; i++) {
-        var j = floor(random(0, width));
-        cars.push(new obstacleCar(i, i % 2, (j + 0) % 760));
-        cars.push(new obstacleCar(i, i % 2, (j + 190) % 760));
-        cars.push(new obstacleCar(i, i % 2, (j + 380) % 760));
-        cars.push(new obstacleCar(i, i % 2, (j + 570) % 760));
+        var start = floor(random(0, width));
+        for (var j = 0; j < width / (scl * 4); j++) {
+            cars.push(new obstacleCar(i, i % 2, (start + scl * 4 * j) % (width + scl * 1.2)));
+        }
     }
 }
 
@@ -75,9 +74,9 @@ function draw() {
 function drawBackground() {
     background(74, 249, 39);
     fill(255, 20, 20);
-    rect(0, 100, 700, 200);
+    rect(0, scl * 2, windowWidth, scl * 4);
     fill(51, 51, 51);
-    rect(0, 400, 700, 200);
+    rect(0, scl * 8, windowWidth, scl * 4);
 }
 
 function keyPressed() {
