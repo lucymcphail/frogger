@@ -11,7 +11,13 @@ function preload() {
 
 function setup() {
     scl = windowHeight / 14;
-    createCanvas(windowWidth, windowHeight);
+
+    canvas = createCanvas(windowWidth, windowHeight);
+    scoreText = createElement("h1", "Score: " + score);
+
+    canvas.position(0, 0);
+    scoreText.position(0, 0);
+
     frogger = new frog();
     logs = [];
     cars = [];
@@ -34,9 +40,7 @@ function setup() {
 function draw() {
     drawBackground();
 
-    for (var i = 0; i < score; i++) {
-        rect(20 + (i * scl), 20, 20, 20);
-    }
+    scoreText.html("Score: " + score);
 
     for (var i = 0; i < logs.length; i++) {
         logs[i].update();
