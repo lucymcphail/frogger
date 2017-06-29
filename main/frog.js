@@ -12,7 +12,7 @@ function frog() {
 
     this.update = function () {
         this.x = constrain(this.x, scl / 2, width - scl / 2);
-        this.y = constrain(this.y, scl / 2, width - scl / 2);
+        this.y = constrain(this.y, scl / 2, height - scl / 2);
         if (this.isOnLog()) {
             if (this.y % (scl * 2) >= (scl)) {
                 this.x++;
