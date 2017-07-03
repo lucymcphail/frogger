@@ -22,7 +22,7 @@ function obstacleLog(row, direction, xpos, img) {
     var blue = floor(random(10));
 
     this.show = function () {
-        if (textures == 1) {
+        if (textures === 1) {
             tint(red, green, blue);
             image(this.img, this.x, this.y, this.width, this.height);
         } else {
@@ -76,7 +76,7 @@ function obstacleCar(row, direction, xpos, img) {
     var blue = floor(random(60, 255));
 
     this.show = function () {
-        if (textures == 1) {
+        if (textures === 1) {
             tint(red, green, blue);
             image(this.img, this.x, this.y, this.width, this.height);
         } else {
